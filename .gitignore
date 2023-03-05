@@ -1,0 +1,3 @@
+# Reject all build folders
+bin/*
+*/bin/*
