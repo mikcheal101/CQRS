@@ -1,0 +1,52 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Post.Cmd.Api",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/SM-POST/Post.Cmd/Post.Cmd.Api/bin/Debug/net6.0/Post.Cmd.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/SM-POST/Post.Cmd/Post.Cmd.Api",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_URLS": "http://localhost:9010",
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "Post.Query.Api",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/SM-POST/Post.Query/Post.Query.Api/bin/Debug/net6.0/Post.Query.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/SM-POST/Post.Query/Post.Query.Api",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_URLS": "http://localhost:9011",
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}
