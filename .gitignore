@@ -1,3 +1,5 @@
-# Reject all build folders
-bin/*
-*/bin/*
+# Reject all binary folders
+bin/
+
+# Reject Objects
+obj/
