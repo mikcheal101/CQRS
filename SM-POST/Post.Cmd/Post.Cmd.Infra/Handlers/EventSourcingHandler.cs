@@ -1,5 +1,3 @@
-
-
 using CQRS.Core.Domain;
 using CQRS.Core.Handlers;
 using CQRS.Core.Infra;
