@@ -1,5 +1,3 @@
-
-
 using CQRS.Core.Domain;
 
 namespace CQRS.Core.Handlers
