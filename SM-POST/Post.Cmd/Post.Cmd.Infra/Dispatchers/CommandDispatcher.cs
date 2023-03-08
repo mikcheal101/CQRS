@@ -6,7 +6,7 @@ namespace Post.Cmd.Infra
     public class CommandDispatcher : ICommandDispatcher
     {
         private readonly Dictionary<Type, Func<BaseCommand, Task>> _handlers = new();
-        void ICommandDispatcher.Registerhandler<T>(Func<T, Task> handler)
+        public void Registerhandler<T>(Func<T, Task> handler) where T: BaseCommand
         {
             if (_handlers.ContainsKey(typeof(T)))
             {
@@ -16,7 +16,7 @@ namespace Post.Cmd.Infra
             _handlers.Add(typeof(T), x => handler((T)x));
         }
 
-        async Task ICommandDispatcher.SendAsync(BaseCommand command)
+        public async Task SendAsync(BaseCommand command)
         {
             if (_handlers.TryGetValue(command.GetType(), out Func<BaseCommand, Task> handler))
             {
