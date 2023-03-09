@@ -6,8 +6,8 @@ services:
     container_name: cqrsMSSQL
     restart: always
     environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=P@ssw0rd02
+      - ACCEPT_EULA=N
+      - MSSQL_SA_PASSWORD=P@ssw0rd02
       - MSSQL_PID=Express
     ports:
       - 1433:1433
